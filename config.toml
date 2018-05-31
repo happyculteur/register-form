@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https//join.happyculteur.co"
+baseURL = "https://join.happyculteur.co"
 languageCode = "fr-FR"
 title = "Happyculteur - Participez à la contruction de notre application"
 theme = "hugo-split-theme"
