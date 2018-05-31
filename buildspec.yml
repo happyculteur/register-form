@@ -1,0 +1,20 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - pip install --upgrade awscli
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz && /bin/tar xvf hugo_0.41_Linux-64bit.tar.gz
+      - ./hugo version
+  build:
+    commands:
+      - git clone https://github.com/$USER/$REPO
+      - cd $REPO
+      - git submodule update
+      - ./hugo
+      - aws s3 sync public/ s3://$BUCKET_NAME --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+      - 'curl -X POST -d "{\"text\": \"Environment deployment succeded\", \"attachments\": [{\"color\": \"#00CC00\",\"title\": \"Deployment informations\", \"text\": \"Repository: https://github.com/$USER/$REPO\nBranch: $BRANCH \nBucket: $BUCKET_NAME\"}]}" https://hooks.slack.com/services/$SLACK_HOOK'
+
