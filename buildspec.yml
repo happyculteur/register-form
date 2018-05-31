@@ -8,7 +8,8 @@ phases:
   build:
     commands:
       - git clone https://github.com/$USER/$REPO
-      - cd $REPO
+      - cd register-form
+      - ls -lah
       - git submodule update
       - ./hugo
       - aws s3 sync public/ s3://$BUCKET_NAME --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
