@@ -12,5 +12,5 @@ particuliers de mettre un premier pied plus facilement dans le monde de
 l'apiculture qu'aujourd'hui.
 
 
-Pour nous aider à fabriquer cette application, c'est par ici :<br>
+Pour nous aider à lancer cette application, c'est par ici (2 minutes) :<br>
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQj-PEpIyrmuOPmGJiVvJNNqb1lNGOvOjYijKVsRUtsiSlsQ/viewform">Formulaire Happyculteur !</a>

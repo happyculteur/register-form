@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://join.happyculteur.co"
 languageCode = "fr-FR"
-title = "Happyculteur - Participez à la contruction de notre application"
+title = "Happyculteur - Participez à la construction de notre application"
 theme = "hugo-split-theme"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
