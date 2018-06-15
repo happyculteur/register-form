@@ -16,7 +16,7 @@ copyright = "Happyculteur"
   # Metadata for search engines and social sharing
   author = "Happyculteur dev team"
   description = "Page permettant de recueillir les informations des futurs utilisateurs de l'application Happyculteur"
-  shareImage = "images/screenshot.png"
+  shareImage = "images/social.jpg"
   twitterHandle = "happyculteur"
 
   # Favicon
