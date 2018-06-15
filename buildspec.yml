@@ -7,7 +7,7 @@ phases:
       - ./hugo version
   build:
     commands:
-      - git clone https://github.com/$USER/$REPO && cd register-form && ls -lah && git submodule init && git submodule update && rm -rvf themes/hugo-split-theme/images/*.png && cp static/images/background.jpg themes/hugo-split-theme/images/ && cp static/images/tn.png themes/hugo-split-theme/images/ && ../hugo && aws s3 sync public/ s3://$BUCKET_NAME --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+      - git clone https://github.com/$USER/$REPO && cd register-form && ls -lah && git submodule init && git submodule update && ../hugo && aws s3 sync public/ s3://$BUCKET_NAME --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
   post_build:
     commands:
       - echo Entered the post_build phase...
